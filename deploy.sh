@@ -5,8 +5,8 @@ echo "Welcome to the stage releaser! " ;
 echo "--------------------------------- " ;
 
 # check for releases folder
-STAGERELEASES=/data/www/stage.findyourperfectvenue.com/releases;
-RELEASEVERSIONFILE=/data/scripts/stage_release_version;
+# STAGERELEASES=/data/www/stage.findyourperfectvenue.com/releases;
+# RELEASEVERSIONFILE=/data/scripts/stage_release_version;
 
 RELEASEENV=$1;
 
