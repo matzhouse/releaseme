@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Welcome to the stage releaser! " ;
+echo "Welcome to the releaser! " ;
 
 echo "--------------------------------- " ;
 
