@@ -14,8 +14,11 @@ esac
 
 echo "--------------------------------- " ;
 
+GITHUBREPO="xxxxx.git"
+SITENAME="xxxxxxxx.com"
+
 # override
-RELEASES=/data/www/${RELEASEENV}.findyourperfectvenue.com/releases;
+RELEASES=/data/www/${RELEASEENV}.${SITENAME}/releases;
 RELEASEVERSIONFILE=/data/scripts/${RELEASEENV}_release_version;
 
 
@@ -53,16 +56,16 @@ mkdir $RELEASENAME && cd $RELEASENAME ;
 
 echo "Cloning git repo.. \n " ;
 
-git clone git@github.com:matzhouse/findyourperfectvenue.com.git . && git checkout stage ;
+git clone $GITHUBREPO . && git checkout stage ;
 
 # Run php composer to get all the shiz
 php composer.phar install ;
 
-cd /data/www/${RELEASEENV}.findyourperfectvenue.com ;
+cd /data/www/${RELEASEENV}.${SITENAME} ;
 
 echo "Linking new release to - $RELEASENAME";
 
-SYMLINK=/data/www/${RELEASEENV}.findyourperfectvenue.com/public_html ;
+SYMLINK=/data/www/${RELEASEENV}.${SITENAME}/public_html ;
 
 SYMLINKTEMP=${SYMLINK}_temp ;
 
